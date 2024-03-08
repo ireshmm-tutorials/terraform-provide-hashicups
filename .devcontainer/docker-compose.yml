@@ -8,6 +8,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock 
       - ../..:/workspaces:cached
+      - /home/iresh/.ssh/id_rsa:/home/vscode/.ssh/id_rsa
+      - /home/iresh/.ssh/id_rsa.pub:/home/vscode/.ssh/id_rsa.pub
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity 
     cap_add:
